@@ -1,5 +1,5 @@
 # Tareas
-## EN PRODUCCIÓN NETLIFY: https://tareas-angular-project.netlify.app
+##  Ejemplo en producción: https://tareas-angular-project.netlify.app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
