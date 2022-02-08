@@ -1,0 +1,219 @@
+/****ESTILOS BODY****/
+html {
+    height: 100%;
+  }
+body{
+    /*background-color: rgb(75, 143, 155);*/
+    margin-top: 5%;
+    /* zoom: 150%; */
+    background: conic-gradient(#bebc79, #2d6459, rgb(124, 49, 61), rgb(220, 176, 176), rgb(163, 208, 163)) fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+
+    margin-top: -250px;   /*height/2 = 500px / 2 */
+    margin-left: -11%;  /* width/2 = 500px / 2 */
+    /*background: rgb(176,174,238);
+    background: radial-gradient(circle, rgba(176,174,238,1) 15%, rgb(85, 18, 75) 90%);*/
+}
+
+/****ESTILOS CONTENEDOR VUE PRINCIPAL****/
+#app{
+    color: rgb(0, 0, 0);
+    background-color: rgb(222, 235, 231);
+    max-width: 350px;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width:10px; 
+    border-style:double; 
+    border-color:rgb(0, 0, 0);
+    
+    
+}
+section p b{      
+    font-family: "Brush Script MT";
+    font-size: 20px;    
+}
+/****TITULO****/
+#titulo{
+    padding-left: 25%;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: white;
+}
+#titulo:hover{
+    color: chartreuse;
+}
+#form{
+    text-align: center;
+}
+
+/****ESTILOS CONTENEDOR DE TODAS TAREAS Y BOTONES****/
+#cuadradito{
+    
+    position: inherit;
+    align-self: center;
+    border-radius: 10px;
+    margin: 0%;
+    padding-top: 10px;
+    align-content:space-between;
+    overflow: auto;
+    /* margin-right: 30px; */
+}
+
+/****ESTILOS CONTENEDOR TAREA****/
+/*
+#cuadrado{
+    border-radius: 50px;
+}*/
+
+/****ESTILOS CUANDO TAREA COMPLETA****/
+.verdecito{
+    text-align: center;
+    margin: 1 auto;
+    padding:0;
+    color:rgb(6, 63, 6);
+    background-color: rgb(193, 236, 150);
+    text-decoration:line-through;
+}
+
+/****ESTILOS CUANDO TAREA NO COMPLETA****/
+.rojito{
+    text-align: center;
+    margin: 1 auto;
+    padding:0;
+    color:rgb(185, 38, 28);
+    background-color: rgb(240, 161, 161);
+}
+
+/****ESTILOS BTN 'AÑADIR' TAREA****/
+#añade{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-color: black;
+}
+
+/****ESTILOS BTN 'DONE' ****/
+#completar{
+    background-color: rgb(166, 230, 166);
+    font-weight: bold;
+    border-radius: 10px;
+}
+#completar:hover{
+    border-color:rgb(94, 255, 0) ;
+}
+
+
+/****ESTILOS BTN 'BORRAR' ****/
+#borrar{
+    background-color: rgb(235, 179, 179);
+    font-weight: bold;
+    border-radius: 10px;
+}
+#borrar:hover{
+    border-color:rgb(255, 0, 0) ;
+}
+
+/****ESTILOS BTN 'DELETE ALL DONE' ****/
+#borrar_completadas{
+    background-color: rgba(157, 146, 157, 0.974);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+}
+#borrar_completadas:hover{
+    background-color: black;
+    color: beige;
+}
+
+/****ESTILOS BTN 'COMPLETED' ****/
+#mostrar_completadas{
+    background-color: rgb(191, 240, 211);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+}
+#mostrar_completadas:hover{
+    background-color: black;
+    color: beige;
+}
+/****ESTILOS BTN 'ACTIVE' ****/
+#mostrar_activas{
+    background-color: rgb(202, 199, 149);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+}
+#mostrar_activas:hover{
+    background-color: black;
+    color: beige;
+}
+/****ESTILOS BTN 'ALL' ****/
+#mostrar_todas{
+    background-color: rgb(155, 170, 194);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+}
+#mostrar_todas:hover{
+    background-color: black;
+    color: beige;
+}
+
+#añade,
+#completar,
+#borrar,
+#borrar_completadas,
+#mostrar_completadas,
+#mostrar_activas,
+#mostrar_todas:hover{
+    cursor: pointer;
+}
+
+
+
+/****ESTILOS CONTADOR SUPERIOR****/
+#contador{
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-left: 10%;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*BOTONES GENERALES*/
+#botones_globales{
+    display: flex;
+    justify-content: center;
+    margin: 0% 20% 0% 20%;
+    padding-top: 20px;
+}
+
+
+#prioridad{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+#prioridad button{
+    background-color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+#prioridad button:hover{
+    background: transparent;
+    
+}
+

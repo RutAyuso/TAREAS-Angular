@@ -1,0 +1,57 @@
+<div id="app">
+    <h1 id="titulo">YOUR LIST</h1>
+
+    <app-formulario></app-formulario>
+    <br>
+    <br>
+
+    <div id="contador">
+        Total tareas:{{this.s.lista.length}} |
+        Tareas completadas: {{contadorCompletadas()}}
+    </div>
+    <br>
+    <br>
+
+    
+    <div id="cuadradito uno" *ngFor="let tarea of filtro(); let i=index">
+
+      <div id="cuadrado" [ngClass]="{'verdecito': !tarea.estado, 'rojito': tarea.estado}">
+        <hr>
+        <section>
+        <p><b>{{tarea.desc}}</b></p>
+        <p>{{tarea.fecha}}</p>
+        <!-- <p>Prioridad dada: {{tarea.prioridad}}</p> -->
+        <!-- <p>{{tarea.estado}}</p> -->
+        </section>
+
+        <button id="borrar" (click)="borrar(i)">&#10060;</button>
+        <button id="completar" (click)="cambiarEstado(i)">✅</button><br><br>
+
+        <div id="prioridad">
+          <button (click)="cambiarPrioridad(0,i)">Irrelevante</button>
+          <button (click)="cambiarPrioridad(1,i)">Importante</button>
+          <button (click)="cambiarPrioridad(2,i)">Muy importante</button>
+         <br><br>
+        </div>
+
+        
+
+    </div>
+    
+      
+
+  </div >
+
+  <div id="botones_globales">
+    
+    <button id="mostrar_todas" (click)="cambiaFiltro(1)">Mostrar todas</button>
+    <button id="mostrar_completadas" (click)="cambiaFiltro(2)">Mostrar completadas</button>
+    <button id="mostrar_activas" (click)="cambiaFiltro(3)">Mostrar incompletas</button>
+    <button id="borrar_completadas" (click)="borrarTodasCompletas()">Borrar todas completas</button>
+    
+  </div>
+    
+
+</div>
+
+<router-outlet></router-outlet>
